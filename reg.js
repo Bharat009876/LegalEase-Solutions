@@ -1,3 +1,5 @@
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyAWToXIIMG23IWuOjqMJnYfuLPhnWWGbrk",
     authDomain: "legalease-2a11f.firebaseapp.com",
@@ -9,6 +11,7 @@ const firebaseConfig = {
   };
   // initializing 
   firebase.initializeApp(firebaseConfig);
+  
   // refernce your database
   var LegalEaseDB = firebase.database().ref('LegalEase')
 
@@ -28,11 +31,11 @@ function submitForm(e) {
     saveMessages(newusername,newEmail,newPhone,newPassword);
 
       // enable alert 
-    document.querySelector('.alert').computedStyleMap.display = "block"; 
+    document.querySelector('.alert').style.display = "block"; 
 
       // remove alert message after 3 sec
     setTimeout(() => {
-        document.querySelector('.alert').computedStyleMap.display = "none"; 
+        document.querySelector('.alert').style.display = "none"; 
     }, 3000);
 
       // reset the form
@@ -54,3 +57,4 @@ const saveMessages = (newusername,newEmail,newPhone,newPassword) => {
     const getElementVal = (id) => {
         return document.getElementById(id).value;
 };
+
