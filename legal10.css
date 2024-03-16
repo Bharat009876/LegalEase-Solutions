@@ -80,19 +80,25 @@ border-bottom :3px black solid;
 
 .tab button.active {
     background-color: transparent ;
-    border : none;
+    border : transparent;
     color: black;
     width: 50px;
 }
 .tab button.Incomplete {
     background-color: transparent ;
     color: black;
-        border : none;
+    border : transparent;
 }
+
 .tab button.Completed {
     background-color: transparent ;
     color: black;
-        border : none;
+    border : transparent;
+}
+.tab button:hover{
+    background-color : rgb(146, 116, 202);
+    border-radius:5px;
+    height : 30px;
 }
 .empty-message {
     font-style: italic;
@@ -113,13 +119,12 @@ border-bottom :3px black solid;
 
 .tab{
     background-color: transparent;
+    border-bottom:2px black solid;
     color: black;
-    padding: 12px 20px;
-   border: transparent;
-   border-radius: 5px;
+    padding: 10px 20px;
    cursor: pointer; 
-   margin: 8px;
-
+   margin-top: -5px;
+   font-size : 18px;
 }
 
 /* Options Styles */
