@@ -19,7 +19,12 @@ header {
 
 .container {
     border: #333;
-    
+
+
+}
+
+.cntr{
+border-bottom :3px black solid;
 }
 .status-bar {
     display: flex;
@@ -57,11 +62,7 @@ header {
 /* Upload Styles */
 .upload {
     padding: 30px;
-    
-}
-.uploadbutton {
-    color: white;
-    background-color: blue;
+
 }
 
 .tabs {
@@ -79,18 +80,19 @@ header {
 
 .tab button.active {
     background-color: transparent ;
+    border : none;
     color: black;
     width: 50px;
 }
 .tab button.Incomplete {
     background-color: transparent ;
     color: black;
-    
+        border : none;
 }
-
 .tab button.Completed {
     background-color: transparent ;
     color: black;
+        border : none;
 }
 .empty-message {
     font-style: italic;
@@ -99,12 +101,14 @@ header {
 
 
 .upload button { /* Same styling as hero button (you may want to differentiate) */
-   background-color: #007bff; 
+   background-color: #6648b1;
    color: white;
    padding: 12px 20px;
    border: none;
    border-radius: 5px;
-   cursor: pointer;
+   position: right;
+
+
 }
 
 .tab{
@@ -159,12 +163,15 @@ header {
 
 
 .dropdown {
-    position: relative;
-    display: inline-block;
+    position: absolute;
+    display: flex;
+    right: 0;
+    margin-right : 150px;
+    margin-top : -100px;
   }
   
   .upload-btn {
-    background-color: #4CAF50;
+    background-color: #6648b1;
     color: white;
     padding: 10px;
     font-size: 16px;
@@ -172,17 +179,19 @@ header {
     cursor: pointer;
     position: absolute;
     top: 10px;
+
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
+
+    min-width: 120px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
+    margin-top : 150px;
   }
-  
+
   .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -198,9 +207,7 @@ header {
     display: block;
   }
   
-  .dropdown:hover .upload-btn {
-    background-color: #3e8e41;
-  }
+
   
 
 

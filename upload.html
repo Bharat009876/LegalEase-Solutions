@@ -29,36 +29,7 @@
                     </li>  
                     <li class="nav-item">
                         <style>
-                            /* Add this style to your existing styles or style tag */
-                            #solutionsLink:hover + .solution-dropdown,
-                            .solution-dropdown:hover {
-                
-                              display: block; /* Show the dropdown when hovering over the link or the dropdown itself */
-                            }
-                          
-                            .solution-dropdown {
-                              display: none; /* Hide the dropdown by default */
-                              position: absolute;
-                              /* Additional styling for positioning, you may need to adjust based on your layout */
-                              top: 65%;
-                              left: 50;
-                              background-color: #ffffff; /* Background color of the dropdown */
-                              border: 1px solid #faefef; /* Border of the dropdown */
-                              padding: 10px;
-                            }
-                          
-                            .solution-options {
-                              list-style: none;
-                              padding: 0;
-                              margin: 0;
-                            }
-                          
-                            .solution-option {
-                              cursor: pointer;
-                            }
-                          
-                            /* Add any additional styling as needed */
-                          </style>
+                        </style>
                           <a href="#" class="btn btn-primary dropdown-toggle" id="solutionsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             User ID
                           </a>
@@ -69,51 +40,44 @@
                           </div>
                   
     </div>
-                    <!--<li class="nav-item">
-                        <a href="#" class="btn btn-primary" style="margin: 10px;">Forms</a>
-                    </li>
-                    <li class="nav-item">
-                        <input class="btn btn-primary" type="button" onClick="location.href='./login.html'" value='Login/Register'>
-                    </li>-->
-                    
-                </ul>
+            </ul>
             </div>
         </div>
         
     </nav>
     <div class="container">
-        <h2>Welcome  [Username]!</h2>
-        <p>Notarize or e-sign a document now.</p>
+        <div class="cntr">
+            <h2>Welcome  [Username]!</h2>
+            <p>Notarize or e-sign a document now.</p>
+        </div>
+
         <main>
             <section class="hero">
               
-              <p>Sign Documents</p>
+              <h3>Sign Documents</h3>
             </section>
             <section class="upload">
                <div class = "dropdown">
                 <button class="upload">Upload a document</button>
                 <div class="dropdown">
                     <div class="dropdown-content">
-                      <a href="#">Notarize a document</a>
-                      <a href="#">eSign a document</a>
+                        <button onClick="location.href='./udocument.html'">Notarize a document</button>
+                        <button onClick="location.href='./uesign.html'">eSign a document</button>
                      
                     </div>
                   </div>
-                
-              
-             
-              <div class="tab">
+            </section>
+            <section>
+                <div class="tab">
                 <button class="active">All</button>
                 <button class="Incomplete">Incomplete</button>
                 <button class="Completed">Completed</button>
               </div>
-
-              <p class="empty-message">You haven't signed any documents yet</p>
+                <p class="empty-message">You haven't signed any documents yet</p>
               <p>Upload a document to get notarized or eSigned now.</p>
              
             </section>
-            
-          </main>
+        </main>
         <div class="row">
             <div class="col"></div>
             <div class="col-auto">
@@ -123,24 +87,20 @@
         </div>
         <div class="row mt-4">
             <div class="col text-center">
-                <button class="btn btn-primary rounded-0">Notarize a Document</button>
+                <button class="btn btn-primary rounded-0" onClick="location.href='./udocument.html'">Notarize a Document</button>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col text-center">
-                <button class="btn btn-primary rounded-0">E-sign a Document</button>
+                <button class="btn btn-primary rounded-0" onClick="location.href='./uesign.html'">E-sign a Document</button>
         </div>
     </div>
     
     </body>
 </html>
-
-
-
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
 AOS.init();
 </script>
-
 </body>
 </html>
