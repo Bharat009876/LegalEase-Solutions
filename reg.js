@@ -1,5 +1,3 @@
-
-
 const firebaseConfig = {
     apiKey: "AIzaSyAWToXIIMG23IWuOjqMJnYfuLPhnWWGbrk",
     authDomain: "legalease-2a11f.firebaseapp.com",
@@ -11,7 +9,7 @@ const firebaseConfig = {
   };
   // initializing 
   firebase.initializeApp(firebaseConfig);
-  
+
   // refernce your database
   var LegalEaseDB = firebase.database().ref('LegalEase')
 
@@ -19,18 +17,28 @@ document.getElementById('register').addEventListener("submit", submitForm);
 
 function submitForm(e) {
   e.preventDefault();
+
+
     
     var newusername = getElementVal("newUsername");
     
     var newEmail = getElementVal("newEmail");
+
     
     var newPhone = getElementVal("newPhone");
 
     var  newPassword = getElementVal("newPassword");
 
+
     saveMessages(newusername,newEmail,newPhone,newPassword);
 
-      // enable alert 
+    document.querySelector('.alert').style.display = "block"; 
+    setTimeout(() => {
+    document.querySelector('.alert').style.display = "none"; 
+    }, 3000);
+  document.getElementById('registerForm').reset();
+  window.location.assign("login.html");
+      /* enable alert 
     document.querySelector('.alert').style.display = "block"; 
 
       // remove alert message after 3 sec
@@ -42,7 +50,7 @@ function submitForm(e) {
 
     document.getElementById('registerForm').reset();
 
-//      console.log(newusername , newEmail , newPhone , newPassword);
+//      console.log(newusername , newEmail , newPhone , newPassword);*/
 } 
 const saveMessages = (newusername,newEmail,newPhone,newPassword) => {
     var newLegalEase = LegalEaseDB.push();
@@ -58,3 +66,26 @@ const saveMessages = (newusername,newEmail,newPhone,newPassword) => {
         return document.getElementById(id).value;
 };
 
+
+document.getElementById('login').addEventListener("submit", LoginForm);
+function LoginForm(e){
+  e.preventDefault();
+  var username = getElementVal("username");
+  var  Password = getElementVal("password");
+  //console.log(username + typeof(username));
+
+LegalEaseDB.on("value",function(snapshot){
+  snapshot.forEach(function(element){
+    if ((element.val().newusername == username && element.val().newPassword==Password ))
+    {
+    document.querySelector('.alert').style.display = "block"; 
+    setTimeout(() => {
+    document.querySelector('.alert').style.display = "none"; 
+  }, 3000);
+  document.getElementById('loginForm').reset();
+    alert("login successfull");
+  window.location.assign("upload.html");
+  }
+  });
+})
+}

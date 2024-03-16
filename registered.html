@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged In</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top" style="list-style-type: none;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="./legal/Screenshot 2024-01-28 202017.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a href="index.html" class="btn btn-primary">Home</a>
+                    </li>  
+                    <li class="nav-item">
+                        <style>
+                            /* Add this style to your existing styles or style tag */
+                            #solutionsLink:hover + .solution-dropdown,
+                            .solution-dropdown:hover {
+                
+                              display: block; /* Show the dropdown when hovering over the link or the dropdown itself */
+                            }
+                          
+                            .solution-dropdown {
+                              display: none; /* Hide the dropdown by default */
+                              position: absolute;
+                              /* Additional styling for positioning, you may need to adjust based on your layout */
+                              top: 65%;
+                              left: 50;
+                              background-color: #ffffff; /* Background color of the dropdown */
+                              border: 1px solid #faefef; /* Border of the dropdown */
+                              padding: 10px;
+                            }
+                          
+                            .solution-options {
+                              list-style: none;
+                              padding: 0;
+                              margin: 0;
+                            }
+                          
+                            .solution-option {
+                              cursor: pointer;
+                            }
+                          
+                            /* Add any additional styling as needed */
+                          </style>
+                          <a href="#" class="btn btn-primary dropdown-toggle" id="solutionsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            User ID
+                          </a>
+                          
+                          <div class="dropdown-menu solution-dropdown dropdown-menu-right" aria-labelledby="solutionsLink">
+                            <button class="dropdown-item btn btn-primary my-2 btn-transparent">Manage your Account</button>
+                            <button class="dropdown-item btn btn-primary btn-transparent" onClick="location.href='./index.html'">Log Out</button>
+                          </div>
+                  
+    </div>
+                    <!--<li class="nav-item">
+                        <a href="#" class="btn btn-primary" style="margin: 10px;">Forms</a>
+                    </li>
+                    <li class="nav-item">
+                        <input class="btn btn-primary" type="button" onClick="location.href='./login.html'" value='Login/Register'>
+                    </li>-->
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </nav>
+    <div class="container">
+        <h2>Welcome  [Username]!</h2>
+        <p>Notarize or e-sign a document now.</p>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-auto">
+                <button class="btn btn-primary rounded-0">Upload a Document</button>
+            </div>
+        </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col text-center">
+                <button class="btn btn-primary rounded-0">Notarize a Document</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col text-center">
+                <button class="btn btn-primary rounded-0">E-sign a Document</button>
+        </div>
+    </div>
+    
+    </body>
+</html>
